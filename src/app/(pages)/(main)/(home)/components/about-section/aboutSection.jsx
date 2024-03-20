@@ -69,7 +69,6 @@ const AboutSection = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div className="flex ">
                         <DefaultButton classNames={"text-white bg-blue"}>

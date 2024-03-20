@@ -38,8 +38,9 @@ const BannerSection = () => {
                 <div>
                     <div className="lg:text-5xl text-4xl">
                         <h1 className=" font-light">Find your dream home</h1>
-                        <h1 className="font-semibold lg:my-5 my-2">with PCAC<span className="
-            text-blue font-bold">.</span></h1>
+                        <h1 className="font-semibold lg:my-5 my-2">with PCAC
+                            <span className="text-blue font-bold">.</span>
+                        </h1>
                     </div>
                     <p className="text-sm text-[#595959] mb-10">
                         If you're new to Genie or looking to supercharge your current stack,
