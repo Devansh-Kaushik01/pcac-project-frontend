@@ -1,15 +1,17 @@
-import BannerSection from "./components/banner-section/bannerSection"
-import AboutSection from "./components/about-section/aboutSection"
+import Hero from "./components/hero/hero"
+import AboutUs from "./components/about-section/aboutUs"
+import WhatWeDo from "./components/whatwedo/whatWeDo"
 
 const Home = () => {
   return (
     <>
-      {/* Banner-Section */}
-      <BannerSection/>
+      {/* Hero-Section */}
+      <Hero/>
 
       {/* About-section */}
-     <AboutSection/>
-
+     <AboutUs/>
+      {/* {What We DO - section} */}
+      <WhatWeDo/>
     </>
   );
 }
