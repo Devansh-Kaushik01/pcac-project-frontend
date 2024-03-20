@@ -9,10 +9,25 @@ import { IoKeyOutline } from "react-icons/io5";
 import PropertyCard from "./components/propertycard/propertyCard"
 
 
+const data = [
+    {
+        title: "Buy property",
+        icon: <GoHome />
+    },
+    {
+        title: "sell property",
+        icon: <RiShakeHandsLine size={25} />
+    },
+    {
+        title: "rent property",
+        icon: <IoKeyOutline size={25} />
+    }
+]
+
 const WhatWeDo = () => {
     return (
         <div className="max-w-container mx-auto ">
-              <div className="grid grid-cols-2 h-[80vh]">
+            <div className="grid grid-cols-2 h-[80vh]">
                 <div className="p-4 mapimg flex flex-col justify-between">
                     <div className="text-5xl font-medium">
                         <h2 className="mt-4 ">We Do This</h2>
@@ -22,7 +37,6 @@ const WhatWeDo = () => {
                         <h2 className="mt-4">Would you like </h2>
                         <h2 className="mt-2 text-gray">to join us for?</h2>
                     </div>
-
                 </div>
                 <div className="p-4 flex flex-col justify-between items-end ">
                     <div className="">
@@ -65,18 +79,16 @@ const WhatWeDo = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex gap-10 ">
-                    <PropertyCard
-                    heading={"Buy property"}
-                    icon={<GoHome size={25} />}/>
-                    <PropertyCard
-                    heading={"sell property"}
-                    icon={<RiShakeHandsLine size={25}/>}/>
-                    <PropertyCard
-                    heading={"rent property"}
-                    icon={<IoKeyOutline size={25}/>}
-                    />
-                </div>
+            <div className='lg:grid grid-cols-3 gap-8 mt-10'>
+                {data.map((item, index) => {
+                    return (
+                        <PropertyCard
+                            key={index}
+                            item={item}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }

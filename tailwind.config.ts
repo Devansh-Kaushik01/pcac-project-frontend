@@ -18,7 +18,9 @@ const config: Config = {
       },
       colors:{
         "blue" : "#0057FF",
-        "gray" : "#A3A3A3"
+        "gray" : "#A3A3A3",
+        "lightgray":"#595959",
+        "lightgray-100": "#EEEEEE"
       },
     },
   },
