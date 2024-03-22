@@ -3,7 +3,22 @@ import DefaultButton from "../../../../components/defaultbutton/defaultbutton";
 import Image from 'next/image'
 import ExploreImg1 from "../../../../../../assets/images/exploreimg1.jpg"
 import ExploreImg2 from "../../../../../../assets/images/exploreimg2.jpg"
+import ExploreCard from "./components/exploreCard"
 
+const exploredata = [
+    {
+        serialno: "01",
+        heading: "Pioneer In Everything"
+    },
+    {
+        serialno: "02",
+        heading: "Empowering Talent",
+    },
+    {
+        serialno: "03",
+        heading: "Strive For Excellence",
+    }
+]
 
 const Explore = () => {
     return (
@@ -17,21 +32,26 @@ const Explore = () => {
                     View All
                 </DefaultButton>
             </div>
-            <div className="grid grid-cols-[30%_auto] mt-6 gap-4">
-                <div className="">
-                   <Image
-                   src={ExploreImg1}
-                   alt="ExploreImg1"
-                   />
-                </div>
-                <div className="">
+            <div className="grid grid-cols-[30%_auto] mt-6 gap-4 ">
                 <Image
-                   src={ExploreImg2}
-                   alt="ExploreImg2"
-                   />
-                </div>
+                    src={ExploreImg1}
+                    alt="ExploreImg1"
+                />
+                <Image
+                    src={ExploreImg2}
+                    alt="ExploreImg2"
+                />
             </div>
-            
+            <div className='lg:grid grid-cols-3 mt-10'>
+                {exploredata.map((item, index) => {
+                    return (
+                        <ExploreCard
+                            key={index}
+                            item={item}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }

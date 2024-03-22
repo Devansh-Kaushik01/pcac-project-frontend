@@ -1,6 +1,7 @@
 "use client"
 import DefaultButton from "../../../../components/defaultbutton/defaultbutton";
 import Image from 'next/image'
+import BlurImg from '../../../../../../assets/images/blurimg.jpg'
 import PropertyImg from "../../../../../../assets/images/propertyimg.jpg"
 import { MdArrowOutward } from "react-icons/md";
 
@@ -17,12 +18,18 @@ const AboutUs = () => {
                             src={PropertyImg}
                             alt="propertyimg"
                         />
+                        <Image
+                            src={BlurImg}
+                            alt="BlurImg"
+                            className="absolute top-0 -right-0 h-full"
+                        />
                     </div>
+                    
                     <div className="content bg-white p-2 pt-8 md:p-12 pb-12 lg:max-w-lg w-96 lg:absolute top-16 right-40">
                         <div className="text-black font-bold text-lg uppercase">
                             <p>Latest News</p>
                         </div>
-                        <p className="my-3 text-justify font-medium text-[#595959] leading-relaxed">There are many variations of passages
+                        <p className="my-3 text-justify font-medium text-lightgray leading-relaxed">There are many variations of passages
                             of Lorem Ipsum available, but the majority have suffered
                             alteration in some form,by injected humour, or randomised words. </p>
                         <div className="mt-6">

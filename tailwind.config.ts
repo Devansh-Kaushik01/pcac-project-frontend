@@ -16,6 +16,9 @@ const config: Config = {
       maxWidth: {
         "container" : "1170px" 
       },
+      height: {
+        "medium" : "80vh" 
+      },
       colors:{
         "blue" : "#0057FF",
         "gray" : "#A3A3A3",

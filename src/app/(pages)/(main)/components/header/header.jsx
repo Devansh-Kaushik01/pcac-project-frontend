@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import DefaultButton from '../../../components/defaultbutton/defaultbutton';
 import Link from "next/link"
 import Image from 'next/image'
@@ -9,8 +9,8 @@ import { CiGlobe } from "react-icons/ci";
 
 const detailData = [
     { name: "Mon-Fri: 08:00- 06:30", link: "/", icon: <GoClock /> },
-    { name: "+91 (987) 6543 2100", link: "tel:+91 (987) 6543 2100", icon:<BsTelephone /> },
-    { name: "contact@pcac.com", link: "mailto: abc@example.com", icon:<CiGlobe />},
+    { name: "+91 (987) 6543 2100", link: "tel:+91 (987) 6543 2100", icon: <BsTelephone /> },
+    { name: "contact@pcac.com", link: "mailto: abc@example.com", icon: <CiGlobe /> },
 ]
 const menuItems = [
     { name: "Home", active: true, link: "/" },
@@ -22,10 +22,10 @@ const menuItems = [
 const Header = ({ }) => {
     const [toggle, setToggle] = useState(false);
     return (
-        <>
+        <Fragment>
             <div className="w-full bg-blue h-10 flex justify-between items-center text-white">
-                <h4 className="text-sm font-medium ml-10"
-                >Property Consultant Association Chandigarh -
+                <h4 className="text-sm font-medium ml-10">
+                    Property Consultant Association Chandigarh -
                     <span className="font-light"> For all your property requirements</span>
                 </h4>
                 <div className='flex items-center gap-8 mr-8'>
@@ -34,7 +34,7 @@ const Header = ({ }) => {
                             <Link href={item.link}
                                 key={index}>
                                 <div className='flex items-center gap-1'>
-                                     {item.icon} {item.name}
+                                    {item.icon} {item.name}
                                 </div>
                             </Link>
                         )
@@ -67,7 +67,7 @@ const Header = ({ }) => {
                 </div>
             </div>
             {/* <MainDrawer /> */}
-        </>
+        </Fragment>
     );
 }
 

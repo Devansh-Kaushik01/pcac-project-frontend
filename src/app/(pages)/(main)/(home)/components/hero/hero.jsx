@@ -8,7 +8,7 @@ import Image1 from "../../../../../../assets/images/image1.jpg"
 import Image2 from "../../../../../../assets/images/image2.jpg"
 import Image3 from "../../../../../../assets/images/image3.jpg"
 
-const BannerSection = () => {
+const Hero = () => {
     return (
         <div className={"max-w-container mx-auto grid lg:grid-cols-2 mt-10 "}>
             <section className="container mx-auto lg:ml-0 ml-5 p-14 ">
@@ -34,8 +34,8 @@ const BannerSection = () => {
                     </div>
                 </div>
             </section>
-            <div className={" h-[80vh] p-10 flex flex-col items-end banner"}>
-                <div>
+            <div className={"p-10 flex flex-col items-end banner"}>
+                <div className="">
                     <div className="lg:text-5xl text-4xl">
                         <h1 className=" font-light">Find your dream home</h1>
                         <h1 className="font-semibold lg:my-5 my-2">with PCAC
@@ -46,22 +46,20 @@ const BannerSection = () => {
                         If you're new to Genie or looking to supercharge your current stack,
                         this section will help learn more about the platform features.
                     </p>
-                    <div>
-                        <DefaultButton classNames={"text-white bg-blue"}>
-                            Contact Us
-                        </DefaultButton>
-                    </div>
+                    <DefaultButton classNames={"text-white bg-blue"}>
+                        Contact Us
+                    </DefaultButton>
                 </div>
                 <div className="mt-24">
                     <h4 className="uppercase text-sm text-blue font-bold">Download app:</h4>
                     <div className="flex gap-5 mt-2">
-                        <Link href="#">
+                        <Link href="/">
                             <Image
                                 src={GoogleplayImg}
                                 alt="GoogleplayImg"
                             />
                         </Link>
-                        <Link href="#">
+                        <Link href="/">
                             <Image
                                 src={AppstoreImg}
                                 alt="AppstoreImg"
@@ -73,4 +71,4 @@ const BannerSection = () => {
         </div>
     )
 }
-export default BannerSection
+export default Hero

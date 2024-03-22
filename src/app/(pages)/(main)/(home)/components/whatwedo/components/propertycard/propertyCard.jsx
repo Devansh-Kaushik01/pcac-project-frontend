@@ -1,15 +1,14 @@
 "use client"
 import DefaultButton from "@/app/(pages)/components/defaultbutton/defaultbutton";
-import Link from 'next/link'
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const PropertyCard = ({item }) => {
+const PropertyCard = ({ item }) => {
     return (
-        <div className="relative flex flex-col text-center mt-6 bg-white shadow-md bg-clip-border rounded-xl h-96">
+        <div className="relative flex flex-col items-center text-center mt-6 bg-white shadow-md bg-clip-border rounded-xl h-96">
             <div className="p-6">
-                <DefaultButton 
-                 classNames="relative mb-5 w-14 h-14 border-2 border-blue hover:bg-blue text-blue hover:text-white focus:ring focus:ring-blue active:opacity-[0.85] rounded-full">
-                    <span class="absolute font-semibold text-xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <DefaultButton
+                    classNames="relative mb-5 w-14 h-14 border-2 border-blue hover:bg-blue text-blue hover:text-white focus:ring focus:ring-blue active:opacity-[0.85] rounded-full">
+                    <span className="absolute font-semibold text-xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                         {item.icon}
                     </span>
                 </DefaultButton>
@@ -22,11 +21,9 @@ const PropertyCard = ({item }) => {
                     randomised words.
                 </p>
             </div>
-                <Link href="#">
-                    <DefaultButton>
-                        <FaArrowRightLong className="text-blue" size={20} />
-                    </DefaultButton>
-                </Link> 
+            <DefaultButton anchor={true} onPress={"/"}>
+                <FaArrowRightLong className="text-blue" size={20} />
+            </DefaultButton>
         </div>
     )
 }

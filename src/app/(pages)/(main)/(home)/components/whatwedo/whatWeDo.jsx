@@ -40,7 +40,7 @@ const WhatWeDo = () => {
                 </div>
                 <div className="p-4 flex flex-col justify-between items-end ">
                     <div className="">
-                        <div className="flex flex-col gap-5 text-md ml-6">
+                        <div className="flex flex-col gap-5 text-md font-medium text-lightgray ">
                             <p>It is a long established fact that a render will be distracted by the
                                 readable content of a page when looking at its layout. The point of
                                 using Lorem Ipsum is that it has a more-or-less normal distribution of
@@ -56,10 +56,10 @@ const WhatWeDo = () => {
                             </p>
                         </div>
                         <div className="mt-6">
-                            <DefaultButton classNames={"text-black flex gap-2 text-md font-semibold"}>
+                            <DefaultButton anchor={true} onPress={"/"} classNames={"!text-black flex gap-2 text-md !p-0 font-semibold"}>
                                 Read Our Menifesto <MdArrowOutward size={20} />
                             </DefaultButton>
-                            <div className="ml-5 flex mt-5">
+                            <div className="flex mt-5">
                                 <Image
                                     src={ProfileLogo}
                                     alt="ProfileLogo"
